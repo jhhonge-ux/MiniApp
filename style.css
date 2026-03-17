@@ -1,0 +1,111 @@
+/* 基础与手机视窗模拟 */
+:root{
+  --bg:#F7F6F2;
+  --text:#2F2F2F;
+  --muted:#A8A8A8;
+  --brand:#3E5B4E; /* 深森林绿 */
+  --accent:#B08D57; /* 浅铜色 */
+}
+
+*{box-sizing:border-box}
+html,body{
+  height:100%;
+  margin:0;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  background: linear-gradient(#efefef00, #efefef00); /* 保持桌面简洁 */
+  color:var(--text);
+}
+
+/* 模拟手机框：在桌面浏览时看起来像小程序窗口 */
+.app-frame{
+  width:390px;
+  max-width:100%;
+  min-height:812px;
+  margin:20px auto;
+  background:var(--bg);
+  border-radius:18px;
+  box-shadow:0 14px 40px rgba(0,0,0,0.12);
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+}
+
+/* Banner */
+.banner{
+  position:relative;
+  height:220px;
+  background:#ddd;
+}
+.banner-slide{
+  position:absolute; inset:0; background-size:cover; background-position:center;
+  filter:brightness(0.7);
+}
+.banner-overlay{
+  position:relative; z-index:2; height:100%;
+  display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:18px; color:#fff;
+}
+.banner-overlay h1{
+  margin:0; font-size:28px; letter-spacing:1px;
+}
+.banner-overlay .lead{ margin:6px 0 0; font-size:14px; opacity:0.95;}
+
+/* 主体滚动区 */
+.page-body{
+  padding:16px;
+  overflow:auto;
+  flex:1 1 auto;
+}
+
+/* 通用 section */
+.section{ margin-bottom:18px; }
+.section-title{ font-size:14px; color:var(--muted); margin:0 0 10px; }
+
+/* 主题卡 */
+.theme-card{
+  background:#fff; border-radius:12px; padding:14px; box-shadow:0 6px 18px rgba(0,0,0,0.06);
+}
+.theme-card h3{ margin:0 0 6px; font-size:16px; color:var(--brand); }
+.theme-card p{ margin:0; color:var(--muted); font-size:13px; line-height:1.5; }
+
+/* 推荐选物 横滑 */
+.product-list{
+  display:flex; gap:12px; overflow-x:auto; padding-bottom:6px;
+}
+.product-card{
+  min-width:170px; max-width:170px; background:#fff; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.06);
+  text-decoration:none; color:inherit; display:block; overflow:hidden;
+}
+.product-thumb{ height:120px; background-size:cover; background-position:center; }
+.product-meta{ padding:10px; }
+.product-name{ font-size:15px; font-weight:600; color:var(--text); }
+.product-desc{ margin-top:6px; color:var(--muted); font-size:12px; }
+
+/* 灵感文章 */
+.articles{ display:flex; flex-direction:column; gap:12px; }
+.article-card{ display:block; background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 6px 18px rgba(0,0,0,0.06); text-decoration:none; color:inherit; }
+.article-card img{ width:100%; height:120px; object-fit:cover; display:block; }
+.article-meta{ padding:10px; }
+.article-meta h3{ margin:0 0 6px; font-size:15px; color:var(--brand); }
+.article-meta p{ margin:0; color:var(--muted); font-size:13px; }
+
+/* 空间氛围 */
+.atmosphere-card{ background:#fff; padding:14px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.06); }
+.atm-text{ margin:0; color:var(--text); font-size:14px; }
+
+/* 品牌小卡 */
+.brand-card{ background:#fff; padding:12px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.06); }
+.brand-card h3{ margin:0 0 8px; color:var(--brand); }
+
+/* 固定底部 tabbar（小程序风格） */
+.tabbar{
+  height:62px; background:#fff; border-top:1px solid #efeae3; display:flex; align-items:center; justify-content:space-around;
+  position:relative;
+}
+.tab-item{ text-decoration:none; color:var(--muted); display:flex; flex-direction:column; align-items:center; font-size:12px; }
+.tab-item.active{ color:var(--brand); }
+.tab-icon{ font-size:18px; display:block; margin-bottom:4px; }
+
+/* 小屏时微调 */
+@media (max-width:420px){
+  .app-frame{ margin:10px; width:100%; border-radius:12px; min-height:680px;}
+}

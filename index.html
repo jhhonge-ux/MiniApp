@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>StillSpace — 首页</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 模拟手机视窗（方便在桌面浏览器预览小程序尺寸） -->
+  <div class="app-frame">
+    <!-- 顶部 banner（可滑） -->
+    <header class="banner">
+      <div class="banner-slide" style="background-image:url('https://via.placeholder.com/600x400?text=StillSpace+Banner1')"></div>
+      <div class="banner-overlay">
+        <h1>StillSpace</h1>
+        <p class="lead">慢下来，感受空间的呼吸</p>
+      </div>
+    </header>
+
+    <main class="page-body">
+      <!-- 本月主题（可点进主题页/文章） -->
+      <section class="section theme" onclick="location.href='article.html'">
+        <h2 class="section-title">本月主题</h2>
+        <article class="theme-card">
+          <h3>春日净化</h3>
+          <p>用香气与水晶，让空间恢复宁静。点击查看完整主题与推荐选物。</p>
+        </article>
+      </section>
+
+      <!-- 推荐选物（横滑卡片） -->
+      <section class="section products">
+        <h2 class="section-title">推荐选物</h2>
+        <div class="product-list" role="list">
+          <a class="product-card" href="product.html" role="listitem">
+            <div class="product-thumb" style="background-image:url('https://via.placeholder.com/300?text=Crystal')"></div>
+            <div class="product-meta">
+              <div class="product-name">白水晶簇</div>
+              <div class="product-desc">天然矿石 · 净化空间</div>
+            </div>
+          </a>
+
+          <a class="product-card" href="product.html" role="listitem">
+            <div class="product-thumb" style="background-image:url('https://via.placeholder.com/300?text=Incense')"></div>
+            <div class="product-meta">
+              <div class="product-name">手工藏香</div>
+              <div class="product-desc">尼泊尔手作 · 轻柔烟气</div>
+            </div>
+          </a>
+
+          <a class="product-card" href="product.html" role="listitem">
+            <div class="product-thumb" style="background-image:url('https://via.placeholder.com/300?text=Holder')"></div>
+            <div class="product-meta">
+              <div class="product-name">陶土香插</div>
+              <div class="product-desc">手工雕刻 · 温润质感</div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- 灵感模块（两栏式卡片） -->
+      <section class="section inspiration">
+        <h2 class="section-title">灵感</h2>
+        <div class="articles">
+          <a class="article-card" href="article.html">
+            <img src="https://via.placeholder.com/600x320?text=如何点香" alt="">
+            <div class="article-meta">
+              <h3>如何点一支藏香</h3>
+              <p>日常简易的点香仪式，享受片刻安静。</p>
+            </div>
+          </a>
+
+          <a class="article-card" href="article.html">
+            <img src="https://via.placeholder.com/600x320?text=水晶净化" alt="">
+            <div class="article-meta">
+              <h3>水晶的日常净化</h3>
+              <p>把简单的净化方法带进你的生活。</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- 空间氛围（视觉停顿、不直接售卖） -->
+      <section class="section atmosphere" onclick="location.href='inspiration.html'">
+        <h2 class="section-title">空间与香</h2>
+        <div class="atmosphere-card">
+          <p class="atm-text">香气让空间慢下来，水晶让光线更柔和。探索布置和搭配建议。</p>
+        </div>
+      </section>
+
+      <!-- 品牌故事（底部简短） -->
+      <section class="section brandstory" onclick="location.href='article.html'">
+        <div class="brand-card">
+          <h3>关于 StillSpace</h3>
+          <p>由匠心与自然素材构成的选物品牌，关注日常节律与仪式感。</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- 固定底部导航（小程序样式） -->
+    <nav class="tabbar">
+      <a class="tab-item active" href="index.html">
+        <span class="tab-icon">🏠</span>
+        <span class="tab-text">首页</span>
+      </a>
+      <a class="tab-item" href="shop.html">
+        <span class="tab-icon">🛍️</span>
+        <span class="tab-text">选物</span>
+      </a>
+      <a class="tab-item" href="inspiration.html">
+        <span class="tab-icon">✨</span>
+        <span class="tab-text">灵感</span>
+      </a>
+      <a class="tab-item" href="profile.html">
+        <span class="tab-icon">👤</span>
+        <span class="tab-text">我的</span>
+      </a>
+    </nav>
+  </div>
+</body>
+</html>
